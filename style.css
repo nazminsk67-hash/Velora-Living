@@ -1,0 +1,176 @@
+body {
+    display:flex;
+    justify-content:center;
+    font-family:Arial,sans-serif;
+}
+
+.container {
+    background-color:#f2f2f2;
+    display:flex;
+    flex-direction:column;
+    width:780px;
+    gap:20px;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.text-container {
+    display:flex;
+    flex-direction:column;
+    line-height:1.4;
+    margin-top:15px;
+    margin-left:20px;
+    justify-content:center;
+    width:100%;
+}
+
+.image-container {
+    width: 100%;
+    height: 300px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+#shop-button {
+    background-color: #9f8fff;
+    color: white;
+    padding: 10px 20px;
+    width: 150px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.shop {
+    display: flex;
+    flex-direction: row;
+}
+
+.speciality {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 0px;
+}
+
+.items {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.container2 {
+    background-color: #1f6c49;
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 0px;
+    gap: 3%;
+    border-radius: 20px;
+}
+
+.text-container2 {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+    margin-top: 5px;
+    margin-right: 20px;
+}
+
+.image-container2 {
+    width: 800px;
+    height: 280px;
+}
+
+.image-container2 img {
+    width: 90%;
+    height: 87%;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 15px;
+}
+
+.bestsellers {
+    margin: 0 20px 30px 20px;
+}
+
+.bestsellers > h1 {
+    font-size: 35px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.chair-items {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    width: 100%;
+}
+
+.chair-card {
+    background-color: white;
+    flex: 1;
+    min-width: 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px green;
+}
+
+.chair-image {
+    width: 100%;
+    height: 220px;
+
+}
+
+.chair-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.chair-details {
+    padding: 20px;
+}
+
+.chair-details h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.chair-details p {
+    font-size: 16px;
+    margin: 15px 0;
+}
+
+.price-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.price-button h3 {
+    margin: 0;
+}
+
+.price-button button {
+    background-color: #1f9d78;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.price-button button:hover {
+    background-color: #176f55;
+}
