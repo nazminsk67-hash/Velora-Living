@@ -52,8 +52,10 @@
     <h1>Bestselling Chairs</h1>
     <div class="chair-items">
         <div class="chair-card">
+             <p class="sale">SALE</p>
             <div class="chair-image">
                 <img src="chair 1.png" alt="The Laid Back">
+                <p class="rating">⭐ 4.5/5</p>
             </div>
             <div class="chair-details">
                 <h2>The Laid Back</h2>
@@ -68,8 +70,10 @@
             </div>
         </div>
         <div class="chair-card">
+             <p class="sale">SALE</p>
             <div class="chair-image">
                 <img src="chair 2.png" alt="The Worker Bee">
+                <p class="rating">⭐ 4.5/5</p>
             </div>
             <div class="chair-details">
                 <h2>The Worker Bee</h2>
@@ -84,8 +88,10 @@
             </div>
         </div>
         <div class="chair-card">
+             <p class="sale">SALE</p>
             <div class="chair-image">
                 <img src="chair 3.png" alt="The Comfort Pro">
+                <p class="rating">⭐ 4.5/5</p>
             </div>
             <div class="chair-details">
                 <h2>The Comfort Pro</h2>
@@ -102,5 +108,66 @@
     </div>
 </div>
 </div>
+<div id="chatbot">
+    <button id="chatbot-button">💬</button>
+    <div id="chatbot-box">
+        <div class="chatbot-header">
+            <span>Chair Assistant</span>
+            <button id="close-chat">×</button>
+        </div>
+        <div id="chat-messages">
+            <div class="bot-message">
+                👋 Hi! I'm your Chair Assistant. How can I help you?
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chat-input" placeholder="Type a message...">
+            <button id="send-message">➤</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const chatbotButton = document.getElementById("chatbot-button");
+    const chatbotBox = document.getElementById("chatbot-box");
+    const closeChat = document.getElementById("close-chat");
+    const sendMessage = document.getElementById("send-message");
+    const chatInput = document.getElementById("chat-input");
+    const chatMessages = document.getElementById("chat-messages");
+
+    chatbotButton.onclick = () => {
+        chatbotBox.style.display = "flex";
+        chatbotButton.style.display = "none";
+    };
+
+    closeChat.onclick = () => {
+        chatbotBox.style.display = "none";
+        chatbotButton.style.display = "flex";
+    };
+
+    function sendChat() {
+        const message = chatInput.value.trim();
+        if (message === "") return;
+        const userMessage = document.createElement("div");
+        userMessage.className = "user-message";
+        userMessage.textContent = message;
+        chatMessages.appendChild(userMessage);
+        chatInput.value = "";
+        setTimeout(() => {
+            const botMessage = document.createElement("div");
+            botMessage.className = "bot-message";
+            botMessage.textContent =
+                "Thanks for your message! I can help you choose the perfect chair.";
+            chatMessages.appendChild(botMessage);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }, 500);
+    }
+    sendMessage.onclick = sendChat;
+    chatInput.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            sendChat();
+        }
+    });
+</script>
 </body>
 </html>
